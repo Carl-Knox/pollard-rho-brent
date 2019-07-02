@@ -68,6 +68,7 @@ prbrent(mpz_t factor, const mpz_t n, mpz_t start)
 		} while (mpz_cmp_ui(gcd,1) == 0);	// while gcd==1
 	} // end if
 
+	/* Clean up ***************************************************************/	
 	if (mpz_cmp(gcd,n)==0)				// check logic == 0
 	{	mpz_clear(gcd);				// free up memory
 		mpz_clear(tmp);
